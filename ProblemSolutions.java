@@ -178,9 +178,40 @@ public class ProblemSolutions {
 
     public static ArrayList<String> pair(int[] input, int k) {
 
-        //
-        // YOUR CODE GOES HERE
-        //
-        return new ArrayList<>(); // Make sure returned lists is sorted as indicated above
-    }
+        // New ArrayList to store the result
+        ArrayList<String> result = new ArrayList<>(); 
+
+        // New HashSet to store the unique integers
+        HashSet<Integer> unique = new HashSet<>();
+
+        // New HashSet to store the pairs
+        HashSet<String> pairs = new HashSet<>();
+
+        // Loop through the input array
+        for (int i : input) {
+            // Calculate difference between the sum and the current integer
+            int diff = k - i;
+
+            // If the difference is in the unique set, add the pair to the pairs set
+            if (unique.contains(diff)) {
+                pairs.add("(" + Math.min(i, diff) + ", " + Math.max(i, diff) + ")");
+            }
+
+            // Add the integer to the unique set
+            unique.add(i);
+        }
+
+        // Add the pairs to the result list
+        for (String set : pairs) {
+            result.add(set);
+        }
+
+        // Sort the result list in ascending order
+        Collections.sort(result);
+
+        // Return the result list
+        return result; 
+
+    } // end of pair method
+
 }
