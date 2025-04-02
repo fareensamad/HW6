@@ -125,7 +125,7 @@ public class ProblemSolutions {
 
         // Iterate through the input list
         for (String set : input) {
-        // If the string is not unique, add it to the duplicate set
+            // If the string is not unique, add it to the duplicate set
             if (!unique.add(set)) {
                 duplicates.add(set);
             }
@@ -179,7 +179,7 @@ public class ProblemSolutions {
     public static ArrayList<String> pair(int[] input, int k) {
 
         // New ArrayList to store the result
-        ArrayList<String> result = new ArrayList<>(); 
+        ArrayList<String> result = new ArrayList<>();
 
         // New HashSet to store the unique integers
         HashSet<Integer> unique = new HashSet<>();
@@ -210,7 +210,7 @@ public class ProblemSolutions {
         Collections.sort(result);
 
         // Return the result list
-        return result; 
+        return result;
 
     } // end of pair method
 
