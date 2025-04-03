@@ -66,7 +66,7 @@ public class ProblemSolutions {
     public static int lastBoulder(int[] boulders) {
 
         // Max-Heap priority queue created to store the boulders in reverse order
-        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> b - a);
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
 
         // Add all the boulders to the priority queue
         for (int boulder : boulders) {
